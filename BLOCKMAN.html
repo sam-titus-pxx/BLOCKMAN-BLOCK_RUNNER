@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    
+ <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+     
+      <link rel="stylesheet" href="css/w3ss.css">
+  
+      <!-- site metas -->
+      <title>BLOCK•MAN</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      
+      <!-- w3.css -->
+      <link rel="stylesheet" href="styles/w3css.css">
+       <link rel="stylesheet" href="styles/style.css">  
+  
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="styles/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="styles/font-styles.css">
+     <!-- <link rel="stylesheet" href="css/CUSTOMIZED-STYLES.css">
+    -->  <!-- Responsive-->
+      <link rel="stylesheet" href="styles/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font awesome -->
+      <link rel="stylesheet" href="styles/FA5/fa5/css/all.css" >
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="styles/jquery.mCustomScrollbar.min.css">
+       <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  
+  <style >
+   
+  body{
+   //background-image: url("tester-projects-images/blockman_logo1.png");
+   background-color: white;
+   }
+  
+  .col{
+   min-width: 30px;
+   min-height: 30px;
+   border: 1px solid black;
+   margin: 0;
+   background-color: white;
+   }
+   
+   p{
+    font-family: times;
+    font-weight: lighter;
+   }
+   
+   .w3-modal{
+    background-image: url("tester-projects-images/blockman_bg2.png");
+    background-color: white;
+    background-size: contain;
+    background-repeat: none;
+   }
+     #FIELD{
+   background-color: white;
+   border: none;//1px solid black;
+   }
+
+  </style>
+ </head>
+
+<body style="margin:0;padding:0;">
+ 
+ 
+ <div style="margin:0;" class="w3-container w3-cell-row pd-bg">
+  
+  <div class="w3-container w3-cell">
+   <button style="display:none;" id="btn-pause-game" class="w3-large w3-bar-item BLM-bg w3-round-small w3-btn" type="button">
+ <span class="fas fa-pause"></span>
+ </button>
+   <button style="display:block;" id="btn-resume-game" class="w3-large BLM-bg w3-round-small w3-btn" type="button">
+ <span class="fas fa-play"></span>
+ </button>
+  </div>
+  
+  <div class="w3-container w3-cell">
+  <button style="display:block;" id="btn-reset-game" class="w3-bar-item w3-large BLM-bg w3-round-small w3-btn " type="button">
+ <span class="fas fa-redo"></span>
+ </button>
+  </div>
+  
+ <div style="display:block;" class="w3-container w3-cell bold">
+  <span id="timer"><span id="minutes-side">00</span>:<span id="seconds-side">00</span></span>
+ </div>
+  
+ </div>
+   
+ <!-- ========= MAIN FIELD AREA ========= -->
+ <div style="margin:0;" class="w3-container">
+ <hr>
+ 
+ <div class="w3-container" id="FIELD">
+ </div>
+ 
+ 
+  <div style="margin:0;" class="w3-container w3-card pd-sm">
+   <h1 class="w3-small bold w3-right "><span class="w3-medium BLM robotoB underline">BLOCKMAN THE GAME</span> © by Fatherly (Sam) P. Titus</h1>
+  </div>
+
+  
+  
+ <div class="w3-container w3-section">
+  <center>
+  <table class="w3-center">
+  <tr>
+   <td><button id="btn-movetopleft" type="button" class="btn btn-lg BLM-bg"> # </button></td>
+   <td><button id="btn-moveup" type="button" class="btn btn-lg w3-amber"> ⩓ </button></td>
+   <td><button id="btn-movetopright" type="button" class="btn btn-lg BLM-bg"> # </button></td>
+  </tr>
+ 
+  <tr>
+   <td><button id="btn-moveleft" type="button" class="btn btn-lg btn-warning"> ⪡ </button></td>
+   <td><button id="btn-switch-player" type="button" class="btn btn-lg w3-large w3-blue-gray">⇆</button></td>
+   <td><button id="btn-moveright" type="button" class="btn btn-lg btn-warning"> ⪢ </button></td>
+  </tr>
+   
+  <tr>
+   <td><button id="btn-movebottomleft" type="button" class="btn btn-lg BLM-bg"> # </bbtn-infotd>
+   <td><button id="btn-movedown" type="button" class="btn btn-lg btn-warning"> ⩔ </button>
+   <td><button id="btn-movebottomright" type="button" class="btn btn-lg BLM-bg"> # </button></td>
+
+  </td></tr>
+  </table>
+  </center>
+   
+ </div> 
+  
+  
+ </div>
+
+  <script src="JQuery.js"></script>
+  <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+  <!--
+      <script src="scripts/grid-field-script.js" ></script>
+   -->
+ <!--<script src="scripts/displays-html.js"></script>
+      <script src="scripts/SURVIVE-RTX.js"></script-->
+      
+       <script src="scripts/lib.js"></script>
+  
+      <script src="scripts/Player.js"></script>
+       <script src="scripts/GridGraph.js"></script>    
+      <script src="scripts/NodeGridGraph.js"></script>
+      <script src="scripts/Main_Graph_Script.js"></script>
+      <script src="scripts/BlockmanControlCentral_min.js"></script>
+    
+ <script >
+      $(document).ready(function(){
+      
+       loadPlayField(0,0)
+       
+      });
+   </script> 
+   </script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script >
+       </script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   
+</body>
+</html>
